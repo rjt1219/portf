@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <script src="./jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <title>ハンドメイドアクセサリー|Fondly H</title>
+</head>
+<body>
+    <div class="base">
+        <div class="container">
+            <header>
+                <a href="index.html"><img src="images/fondlyh.png" class="fh" alt=""></a>
+                <div id="hamburger">
+                    <p class="btn-gNav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </p>
+                    <nav id="gNav">
+                        <ul class="gNav-menu">
+                            <li><a href="index.html"><figure><img src="images/home.png" alt=""></figure></a></li>
+                            <li><a href="items.html"><figure><img src="images/items.png" alt=""></figure></a></li>
+                            <li><a href="about.html"><figure><img src="images/about.png" alt=""></figure></a></li>
+                            <li><a href="contact.html"><figure><img src="images/contact.png" alt=""></figure></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <main>
+                <div class="about">
+                    <h2>About</h2>
+                    <h3>- Foundly H -</h3>
+                    <p>身に着けるだけで気持ちと顔周りが華やぐハンドメイドアクセサリーを販売しています。
+                        シンプルなファッションから個性的なファッションまで幅広く活躍できるアクセサリーが多いです。<br>
+                        宗教モチーフ・ゴシック調、<span class="imp">真鍮パーツ</span>・ヴィンテージパーツ等を使用し<span class="imp">暖色</span>メインで作成しています。<br>
+                    </p>
+                </div>
+                <div class="about">
+                    <h3>- Attention -</h3>
+                    <p>当店の商品はハンドメイド品、海外製造商品が多いです。色ムラやゆがみ、<span class="imp">接着剤があふれている</span>ものもあります。
+                        気になる方はご注文をご遠慮ください。また、強い力が加わると破損の恐れがございますので、お取り扱いにはご注意ください。<br>
+                        イヤリング、又はアレルギー対応金具に<span class="imp">変更希望</span>の場合はお問い合わせフォームにその旨を記述ください。
+                    </p>
+                </div>
+                <div class="about">
+                    <h3>- Shipping -</h3>
+                    <p>送料無料で <span class="alf">1</span> 週間以内に発送いたします。お客様からの入金が確認取れ次第の発送です。<br>
+                        お支払期限が過ぎた場合は自動キャンセルになります。
+                    </p>
+                </div>
+                <div class="about">
+                    <h3>- Payment -</h3>
+                    <p>クレジットカード・銀行振込・<span class="alf">PayPay</span> 
+                    </p>
+                </div>
+                <div class="about">
+                    <h3>- Return or Exchange -</h3>
+                    <p>-不具合品の場合<br><br>
+                        商品到着から <span class="alf">1</span> 週間以内に当店にお問い合わせフォームにて<span class="imp">写真を添付して</span>ご連絡お願いいたします。<br>
+                        至急交換・返金の対応をさせて頂きます。<br>
+                        なお、ご使用・ご試着されたあとの返品に関しましては対応いたしかねますので到着時に必ずご確認ください。<br><br>
+                        -お客様都合の場合<br><br>
+                        お客様のイメージ・色味違い、不要になった等のお客様都合の返品は<span class="imp">一切お受けできません</span>。
+                    </p>
+                </div>
+                <div class="about">
+                    <h3>- Order and Cancel -</h3>
+                    <p>-ご注文に関しまして<br><br>
+                        住所に誤りがないかご確認の上ご注文ください。（マンション、アパートにお住まいの方は建物名の記載もお願いいたします。）<br>
+                        ご住所に誤りがありますと当店の方に返送されます。再送可能ですが<span class="imp">再送料を請求</span>いたします。<br><br>
+                        -キャンセルに関しまして<br><br>
+                        ご注文確定後のキャンセルはいたしかねます。
+                    </p>
+                </div>
+            </main>
+            <footer>
+                <p><small>&copy;Fondly H All Rights Reserved.</small></p>
+            </footer>    
+        </div>
+        <div id="page_top"><a href="#"></a></div>
+    </div>
+    <script src="./paginathing.min.js"></script>
+    <script>
+        $(function() {
+        $('.btn-gNav').on("click", function(){
+        $(this).toggleClass('open');
+        $('#gNav').toggleClass('open');
+        });
+    });
+    </script>
+    <script>
+        jQuery(function() {
+        var pagetop = $('#page_top');   
+        pagetop.hide();
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {  
+                pagetop.fadeIn();
+            } else {
+                pagetop.fadeOut();
+            }
+        });
+        $('a[href^="#"]').click(function(){
+                var time = 500;
+                var href= $(this).attr("href");
+                var target = $(href == "#" ? 'html' : href);
+                var distance = target.offset().top;
+        $("html, body").animate({scrollTop:distance}, time, "swing");
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>
